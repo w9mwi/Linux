@@ -1,2 +1,11 @@
+Linux GIMP Image Editor
+=======================
+How to crop an image and save the selection...
+
+1) Tools / Selection Tools / Rectangle Select
+2) Image / Autocrop Image
+3) File / Export  (Saves the image to a .png file.)
+
+
 LINUX COMMANDS
 ==============
