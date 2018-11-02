@@ -15,8 +15,17 @@ LINUX COMMANDS
 FIND COMMAND EXAMPLES
 =====================
 $ find -iname JSPWiki*
-$ find . -iname \*.xml  (Finds all files ending in ".xml" in all subdirectories, case insensitive.)
-$ find . -name .svn | xargs rm -r  (Remove all directories named .svn located in the current directory, AND all its subdirectories.)
+$ find . -name TestFile.txt	(Find a file called TestFile.txt in current and all sub-directories, case sensitive.)
+$ find . -iname \*.xml  (Finds all files ending in ".xml" in all sub-directories, case insensitive.)
+$ find . -name .svn | xargs rm -r  (Remove all directories named .svn located in the current directory,
+                                    AND all subdirectories.)
+$ find /home -user exampleuser -mtime 7 -iname ".db"  (Find all .db files in the /home directory, modified in the
+                                                       last 7 days by a user named exampleuser, case insensitive.)
+  FIND OPTIONS:
+  -iname  (Search without regard for text case.)
+  -not    (Return only results that do not match the test case.)
+  -type f  (Search for files.)
+  -type d  (Search for directories.)
 
 
 GREP COMMAND EXAMPLES
