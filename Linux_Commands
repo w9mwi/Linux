@@ -7,5 +7,31 @@ How to crop an image and save the selection...
 3) File / Export  (Saves the image to a .png file.)
 
 
+==================================================================================================
 LINUX COMMANDS
 ==============
+
+
+FIND COMMAND EXAMPLES
+=====================
+$ find -iname JSPWiki*
+$ find . -iname \*.xml  (Finds all files ending in ".xml" in all subdirectories, case insensitive.)
+$ find . -name .svn | xargs rm -r  (Remove all directories named .svn located in the current directory, AND all its subdirectories.)
+
+
+GREP COMMAND EXAMPLES
+=====================
+
+Recursively search all files in the current directory AND child directories for the string '13.jpg' (case insensitive).
+   -r = recursive
+   -i = case insensitive
+$  grep -ir '13.jpg' .
+$  grep -ir '13.jpg' ./*xml
+$  grep -r "mystery string" /home/junk  (-r searches all child directories recursively.)
+$  grep -i "mystery string" /home/junk  (-i ignores case.)
+
+
+
+TOUCH COMMAND EXAMPLES
+======================
+touch -t 8001031305 oldfile  #Changes the modification time/date of oldfile to 13:05 on January 3, 1980.
