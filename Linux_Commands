@@ -73,6 +73,18 @@ $ chmod 1777 readme.txt
 $ ll
   -rwxrwxrwt 1 jsmith jsmith 0 Nov 13 14:07 readme.txt*
 
+
+CHOWN COMMAND EXAMPLES
+======================
+The chown command changes the user and/or group ownership
+for given file or directory.  The syntax is:
+
+$ chown owner-user filename
+$ chown owner-user:owner-group filename
+$ chown owner-user:owner-group directoryname
+$ chown options owner-user:owner-group filename
+
+
 TOUCH COMMAND EXAMPLES
 ======================
 touch -t 8001031305 oldfile  #Changes the modification time/date of oldfile to 13:05 on January 3, 1980.
