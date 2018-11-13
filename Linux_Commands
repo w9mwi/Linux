@@ -52,6 +52,15 @@ The first 7 sets the USER permissions.
 The second 7 sets the GROUP permissions.
 The third 7 sets the permissions for everybody else.
 
+7 = rwx = read, write, and execute
+6 = rw- = read and write
+5 = r-x = read and execute
+4 = r-- = read-only
+3 = -wx = write and execute
+2 = -w- = write only
+1 = --x = execute only
+0 = --- = none
+
 $ ll
   -rwxrwxrwx 1 jsmith jsmith 0 Nov 13 14:07 readme.txt*
 
