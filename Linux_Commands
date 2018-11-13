@@ -77,7 +77,12 @@ $ ll
 CHOWN COMMAND EXAMPLES
 ======================
 The chown command changes the user and/or group ownership
-for given file or directory.  The syntax is:
+for given file or directory.  When you list a file, and the
+following displays, 'jsmith' is the owner and 'programmer'
+is the group.
+
+$ ll readme.txt
+  -rw-rw-r-- 1 jsmith programmer 0 Nov 13 14:07 readme.txt
 
 $ chown owner-user filename
 $ chown owner-user:owner-group filename
