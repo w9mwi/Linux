@@ -67,7 +67,7 @@ $ ll
 The '1' in the following 'chmod 1777' command sets the 'sticky bit' of the
 readme.txt file.  This means only the file owner, the directory owner, or
 the root superuser can delete the file, regardless of the file's group
-permissions.  Notice the last 3 'rwx' permission chars become 'rwt'
+permissions.  Notice the last 3 'rwx' permission chars change to 'rwt'
 
 $ chmod 1777 readme.txt
 $ ll
