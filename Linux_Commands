@@ -45,7 +45,7 @@ CHMOD COMMAND EXAMPLES
 The chmod command changes the access permissions of files and folders.
 
 $ ll readme.txt
-  -rw-rw-r-- 1 tbouril tbouril 0 Nov 13 14:07 readme.txt
+  -rw-rw-r-- 1 jsmith jsmith 0 Nov 13 14:07 readme.txt
 $ chmod 777 readme.txt
 
 The first 7 sets the USER permissions.
@@ -53,7 +53,7 @@ The second 7 sets the GROUP permissions.
 The third 7 sets the permissions for everybody else.
 
 $ ll
-  -rwxrwxrwx 1 tbouril tbouril 0 Nov 13 14:07 readme.txt*
+  -rwxrwxrwx 1 jsmith jsmith 0 Nov 13 14:07 readme.txt*
 
 
 TOUCH COMMAND EXAMPLES
