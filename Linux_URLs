@@ -21,7 +21,6 @@ in the top navigation bar for accessibility.
 VirtualBox is an open source cross-platform virtualization software,
 it can be installed on any operating system and enable you to install
 and run multiple guest operating systems on same computer.
-
 --> https://www.tecmint.com/install-virtualbox-on-redhat-centos-fedora/?fbclid=IwAR1HzPTINABqV3d0IMdtz4ltc2ai-hKABrfBFVHx8qBxUwp20C9E9OR4x_I
 
 
@@ -31,5 +30,8 @@ user to output the content of a file while the file is changing
 or continuously updating. Some of the most known and heavily
 used utility to display a file content in real time in Linux
 is the tail command (manage files effectively).
-
 --> https://www.tecmint.com/watch-or-monitor-linux-log-files-in-real-time/?fbclid=IwAR00ECvfg1RHIlCGRX5mUm5wPrXj55ADCWhg8fU9gDOw9MkgCzuYSWA2P90
+
+Audio File Encoder
+Flacon extracts individual tracks from one big audio file containing the entire album of music and saves them as separate audio files.
+--> https://flacon.github.io/?fbclid=IwAR17MSWTsCojI9cUjYwutVerIcubQht3ydsZZKrNUp48kLatIQy5egbVuzI
