@@ -98,3 +98,30 @@ $ chown options owner-user:owner-group filename
 TOUCH COMMAND EXAMPLES
 ======================
 touch -t 8001031305 oldfile  #Changes the modification time/date of oldfile to 13:05 on January 3, 1980.
+
+
+CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
+=============================================
+SEE --> http://www.linux-commands-examples.com/cdparanoia
+
+Extract only the 3rd track of the CD to a file...
+$ cdparanoia 3 /home/tbouril/DaveMason_3.flac
+
+Extract tracks 1 through 3 of the CD to a file...
+$ cdparanoia 1-3 /home/tbouril/DaveMason_1to3.flac
+
+Extract the only the first track of the CD to a file...
+$ cdparanoia -- -1 /home/tbouril/DaveMason_1.flac
+
+Extract the first 2 tracks (songs) of the CD to a single file...
+$ cdparanoia -- -2 /home/tbouril/DaveMason_2.flac
+
+Visually display the data contents of the CD.  Use that information
+to rip individual tracks from the CD to a file by running a command
+similar to the one shown below in the next example.
+$ cdparanoia -vsQ
+
+Extract the following from the CD to a single file
+FROM: Track 1 at 3:02.12
+TO:   Track 2 at 4:30
+$ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
