@@ -38,12 +38,9 @@ $ find -type p  (Find a pipe type file.)
 $ find -type b  (Find a regular type file.)
 $ find -type l  (Find a symbolic link type file.)
 $ find -type s  (Find a socket type file.)
-  
-
 
 GREP COMMAND EXAMPLES
 =====================
-
 Recursively search all files in the current directory AND child directories for the string '13.jpg' (case insensitive).
    -r = recursive
    -i = case insensitive
@@ -105,6 +102,16 @@ $ chown owner-user filename
 $ chown owner-user:owner-group filename
 $ chown owner-user:owner-group directoryname
 $ chown options owner-user:owner-group filename
+
+DISK USAGE
+==========
+$ df -h
+
+
+PROCESSES
+=========
+$ top
+
 
 
 TOUCH COMMAND EXAMPLES
