@@ -30,14 +30,14 @@ $ find /home -user exampleuser -mtime 7 -iname ".db"  (Find all .db files in the
   FIND OPTIONS:
   -iname  (Search without regard for text case.)
   -not    (Return only results that do not match the test case.)
-    
-  $ find -type b  (Find a block type file.)
-  $ find -type c  (Find a character type file.)
-  $ find -type d  (Find a directory type file.)
-  $ find -type p  (Find a pipe type file.)
-  $ find -type b  (Find a regular type file.)
-  $ find -type l  (Find a symbolic link type file.)
-  $ find -type s  (Find a socket type file.)
+
+$ find -type b  (Find a block type file.)
+$ find -type c  (Find a character type file.)
+$ find -type d  (Find a directory type file.)
+$ find -type p  (Find a pipe type file.)
+$ find -type b  (Find a regular type file.)
+$ find -type l  (Find a symbolic link type file.)
+$ find -type s  (Find a socket type file.)
   
 
 
@@ -47,10 +47,14 @@ GREP COMMAND EXAMPLES
 Recursively search all files in the current directory AND child directories for the string '13.jpg' (case insensitive).
    -r = recursive
    -i = case insensitive
-$  grep -ir '13.jpg' .
-$  grep -ir '13.jpg' ./*xml
-$  grep -r "mystery string" /home/junk  (-r searches all child directories recursively.)
-$  grep -i "mystery string" /home/junk  (-i ignores case.)
+$ grep -ir '13.jpg' .
+$ grep -ir '13.jpg' ./*xml
+$ grep -r "mystery string" /home/junk  (-r searches all child directories recursively.)
+$ grep -i "mystery string" /home/junk  (-i ignores case.)
+
+The /usr/share/dict/american-english file contains approx. 99, words (lines).
+Find all the words in that file that begin contain all vowels in the order a, e, i, o, u...
+$ grep '.*a.*e.*i.*o.*u' /usr/share/dict/american-english
 
 
 CHMOD COMMAND EXAMPLES
