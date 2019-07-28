@@ -20,7 +20,8 @@ LINUX COMMANDS
 FIND COMMAND EXAMPLES
 =====================
 $ find -iname JSPWiki*
-$ find . -name TestFile.txt	(Find a file called TestFile.txt in current and all sub-directories, case sensitive.)
+$ find . -name TestFile.txt	(Find a file named TestFile.txt in current and all sub-directories, case sensitive.)
+$ find / -name TestFile.txt	(Find a file named TestFile.txt in the root (/) and all sub-directories, case sensitive.)
 $ find . -iname \*.xml  (Finds all files ending in ".xml" in all sub-directories, case insensitive.)
 $ find . -name .svn | xargs rm -r  (Remove all directories named .svn located in the current directory,
                                     AND all subdirectories.)
@@ -29,8 +30,15 @@ $ find /home -user exampleuser -mtime 7 -iname ".db"  (Find all .db files in the
   FIND OPTIONS:
   -iname  (Search without regard for text case.)
   -not    (Return only results that do not match the test case.)
-  -type f  (Search for files.)
-  -type d  (Search for directories.)
+    
+  $ find -type b  (Find a block type file.)
+  $ find -type c  (Find a character type file.)
+  $ find -type d  (Find a directory type file.)
+  $ find -type p  (Find a pipe type file.)
+  $ find -type b  (Find a regular type file.)
+  $ find -type l  (Find a symbolic link type file.)
+  $ find -type s  (Find a socket type file.)
+  
 
 
 GREP COMMAND EXAMPLES
@@ -125,3 +133,27 @@ Extract the following from the CD to a single file
 FROM: Track 1 at 3:02.12
 TO:   Track 2 at 4:30
 $ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
+
+=============================================================================================
+=============================================================================================
+In UNIX...
+
+1) Everything is a file.  (Files, Processes, Devices, are files, 
+2) Everything "running" (executing) is a process.
+3) Every file is text or data.
+4) File handles are files.
+5) Shared memory is files.
+6) Parents sacrifice their life to create children,
+7) Zombies refuse to die.
+
+
+The UNIX ls command shows...
+
+$ echo $$  (Displays the current process ID of your shell.)
+$ ls -la /proc/$$  (Displays the directory representing your shell process.)
+$ cat /proc/cmdline  ("cmdline" represents a directory the /proc directory.)
+$ ls -la /proc  (Displays all running processes.  Most are numbers, which are directories.)
+$ ls -la /proc
+
+
+
