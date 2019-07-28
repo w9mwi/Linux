@@ -52,8 +52,8 @@ $ grep -ir '13.jpg' ./*xml
 $ grep -r "mystery string" /home/junk  (-r searches all child directories recursively.)
 $ grep -i "mystery string" /home/junk  (-i ignores case.)
 
-The /usr/share/dict/american-english file contains approx. 99, words (lines).
-Find all the words in that file that begin contain all vowels in the order a, e, i, o, u...
+The file /usr/share/dict/american-english contains approx. 99,000 words (lines).
+Find all the words in that file that contain all vowels, in the order of a, e, i, o, u...
 $ grep '.*a.*e.*i.*o.*u' /usr/share/dict/american-english
 
 
