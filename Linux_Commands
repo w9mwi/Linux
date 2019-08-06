@@ -159,12 +159,12 @@ In UNIX...
 
 
 The UNIX ls command shows...
-
 $ echo $$  (Displays the current process ID of your shell.)
 $ ls -la /proc/$$  (Displays the directory representing your shell process.)
 $ cat /proc/cmdline  ("cmdline" represents a directory the /proc directory.)
 $ ls -la /proc  (Displays all running processes.  Most are numbers, which are directories.)
 $ ls -la /proc
 
-
+Convert .wav files to .flac files...
+sox  track_01.wav  track_01.flac
 
