@@ -162,14 +162,13 @@ $ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
 =============================================================================================
 In UNIX...
 
-1) Everything is a file.  (Files, Processes, Devices, are files, 
+1) Everything is a file.  (Files, Processes, Devices are files.)
 2) Everything "running" (executing) is a process.
-3) Every file is text or data.
+3) Every file is either text or data.
 4) File handles are files.
 5) Shared memory is files.
-6) Parents sacrifice their life to create children,
+6) Parents sacrifice their life to create children.
 7) Zombies refuse to die.
-
 
 The UNIX ls command shows...
 $ echo $$  (Displays the current process ID of your shell.)
