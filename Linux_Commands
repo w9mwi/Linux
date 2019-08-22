@@ -40,7 +40,7 @@ $ find -type l  (Find a symbolic link type file.)
 $ find -type s  (Find a socket type file.)
 
 Count the number of files and directories contained in a single directory:
-$ ls | wc -l
+$ ls -1 | wc -l
 
 Count ONLY files in a directory, and in all child directories:
 $ find . -type f | wc -l
