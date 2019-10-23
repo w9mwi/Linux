@@ -33,7 +33,7 @@ $ find /home -user exampleuser -mtime 7 -iname ".db"  (Find all .db files in the
 
 $ find -type b  (Find a block type file.)
 $ find -type c  (Find a character type file.)
-$ find -type d  (Find a directory type file.)
+$ find -type d  (Find a directory type file.)  EXAMPLE:  find / -type d -name "purescript-master"
 $ find -type p  (Find a pipe type file.)
 $ find -type b  (Find a regular type file.)
 $ find -type l  (Find a symbolic link type file.)
