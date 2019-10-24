@@ -17,6 +17,15 @@ LINUX COMMANDS
 ==============
 
 
+CREATE A NEW USER AND SET USER'S PASSWORD
+=========================================
+1) First, login as superuser (or use "sudo" command).
+2) Add a new user named "test" to the /home directory:
+   $ useradd -m test
+3) Set the "test" user's password:
+   $ passwd test
+
+
 FIND COMMAND EXAMPLES
 =====================
 $ find -iname JSPWiki*
