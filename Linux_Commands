@@ -25,6 +25,21 @@ CREATE A NEW USER AND SET USER'S PASSWORD
 3) Set the "test" user's password:
    $ passwd test
 
+DELETE/REMOVE A USER
+====================
+NOTE: -f  Forces the removal of the user account, even if the
+          user is still logged in.  Also removes all files along
+          with the home directory itself and the user’s mail spool.
+      -r  Removes all files in the user's home directory, along
+          with the home directory itself, and the user's mail spool.
+          Files located in other file systems will have to be
+          searched for and deleted manually.
+1) First, login as superuser (or use "sudo" command).
+2) $ userdel -r userName
+   ...OR...
+   $ userdel -r -f userName
+
+
 
 FIND COMMAND EXAMPLES
 =====================
