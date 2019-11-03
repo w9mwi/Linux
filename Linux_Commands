@@ -15,12 +15,11 @@ Linux GIMP Image Editor
    ------------------------------------------------------------------------
    1) Open the .xcf file.
    2) From thre menu, select "File / Export As"
-   3) In the file dialog screen that appears, enter the new filename.
-   4) At the top of the file dialog screen that appears, enter the desired
+   3) At the top of the file dialog screen that appears, enter the desired
       filename, including the filename's extension (.jpg, .png, etc.).
-   5) Near the lower-right of the file dialog screen, select the desired
+   4) Near the lower-right of the file dialog screen, select the desired
       file type from the dropdown control.
-   6) Press the "Export" button.
+   5) Press the "Export" button.
 
 
 
