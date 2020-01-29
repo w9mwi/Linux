@@ -167,8 +167,12 @@ TOUCH COMMAND EXAMPLES
 touch -t 8001031305 oldfile  #Changes the modification time/date of oldfile to 13:05 on January 3, 1980.
 
 
-CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
-=============================================
+AUDIO - CONVERT .WAV FILES TO .FLAC FILES
+=================================
+sox  track_01.wav  track_01.flac
+
+AUDIO - CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
+=====================================================
 SEE --> http://www.linux-commands-examples.com/cdparanoia
 
 Extract only the 3rd track of the CD to a file...
@@ -211,7 +215,3 @@ $ ls -la /proc/$$  (Displays the directory representing your shell process.)
 $ cat /proc/cmdline  ("cmdline" represents a directory the /proc directory.)
 $ ls -la /proc  (Displays all running processes.  Most are numbers, which are directories.)
 $ ls -la /proc
-
-Convert .wav files to .flac files...
-sox  track_01.wav  track_01.flac
-
