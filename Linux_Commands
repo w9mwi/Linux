@@ -92,6 +92,9 @@ $ find / -type f | wc -l
 
 GREP COMMAND EXAMPLES
 =====================
+SEE --> https://www.tecmint.com/12-practical-examples-of-linux-grep-command
+SEE --> https://www.tecmint.com/linux-grep-commands-character-classes-bracket-expressions
+
 Recursively search all files in the current directory AND child directories for the string '13.jpg' (case insensitive).
    -r = recursive
    -i = case insensitive
