@@ -54,6 +54,9 @@ NOTE: -f  Forces the removal of the user account, even if the
 
 FIND COMMAND EXAMPLES
 =====================
+
+SEE --> https://www.tecmint.com/35-practical-examples-of-linux-find-command
+
 $ find -iname JSPWiki*
 $ find . -name TestFile.txt	(Find a file named TestFile.txt in current and all sub-directories, case sensitive.)
 $ find / -name TestFile.txt	(Find a file named TestFile.txt in the root (/) and all sub-directories, case sensitive.)
