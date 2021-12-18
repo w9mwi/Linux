@@ -27,6 +27,26 @@ Linux GIMP Image Editor
 LINUX COMMANDS
 ==============
 
+HOW TO CREATE A PASSWORD FOR ROOT (SUPERUSER)
+=============================================
+
+Before you can use the "su -" command to become root
+(superuser), you must change the root password.
+
+1) From the command terminal run:
+
+   $ sudo -i
+   $ passwd            (Enter your password when prompted.)
+   $ sudo passwd root  (Enter new root password when prompted.)
+   
+   
+HOW TO BECOME ROOT (SUPERUSER)
+==============================
+
+1) From the command terminal run:
+
+   $ su -  (Enter root password when prompted.)
+
 
 CREATE A NEW USER AND SET USER'S PASSWORD
 =========================================
