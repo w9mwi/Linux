@@ -2,6 +2,13 @@
 51 lesser-known Linux commands:
 https://www.tecmint.com/51-useful-lesser-known-commands-for-linux-users/?fbclid=IwAR1rwWAit-xyHllK7YN-Pwl_SGTKZ6yifgO4tsjmRrzos6dcHsMyV3TlVe8
 
+HOW TO UNZIP A tar.gz FILE
+==========================
+Example file name is:  jdk-11.0.13_linux-x64_bin.tar.gz
+
+$ tar -xvzf jdk-11.0.13_linux-x64_bin.tar.gz
+
+
 
 Linux GIMP Image Editor
 =======================
