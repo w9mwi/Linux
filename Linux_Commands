@@ -66,6 +66,9 @@ the PERMISSIONS, and will be one of these 6 characters:
       the root user can rename or delete files in the directory.  See the
       "chmod" comand below for more details.
 
+NOTE: For info about the "setgid" and "setuid" Linux commands see:
+      https://en.wikipedia.org/wiki/Setuid
+
 Of those 9 characters...
 The first 3 characters designate permissions for the USER.
 The middle 3 characters designate permissions for the GROUP.
