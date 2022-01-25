@@ -54,7 +54,7 @@ the PERMISSIONS, and will be one of these 6 characters:
 3) w  Permission to write.
 4) x  Permission to execute.
 5) s  The execution permission for the GROUP can be an 's'.  This can be set via
-      the Linux "setuid" command.  When this is applied to a FILE, it means
+      the Linux "setgid" command.  When this is applied to a FILE, it means
       the FILE will be executed with the privileges of the owner’s group.  When
       used with a DIRECTORY, any files created inside the DIRECTORY will take
       their GROUP permissions from the DIRECTORY they’re being created in,
