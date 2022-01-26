@@ -41,8 +41,8 @@ which you run the "ll command") takes up a total of 268
 all directories, including child directories.  The following
 two commands also reveal this information.
 
-$ ls -as1  (Shows the number for each file and each directory, including all child directories.)
-$ ls -lh   (Shows the number for each file and each directory, NOT including child directories.)
+$ ls -as1  (Shows the number for each file and each directory, including files/directories beginning with the period ('.') character.)
+$ ls -lh   (Shows the number for each file and each directory, NOT including files/directories beginning with the period ('.') character.)
 
 The VERY FIRST CHARACTER appearing on each line in the
 list will be one of the following 8 characters:
