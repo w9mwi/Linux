@@ -289,8 +289,12 @@ TOUCH COMMAND EXAMPLES
 touch -t 8001031305 oldfile  #Changes the modification time/date of oldfile to 13:05 on January 3, 1980.
 
 
+AUDIO - CONVERT .WAV FILES TO .MP3 FILES
+========================================
+ffmpeg -i track01.wav track01.mp3
+
 AUDIO - CONVERT .WAV FILES TO .FLAC FILES
-=================================
+=========================================
 sox  track_01.wav  track_01.flac
 
 AUDIO - CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
