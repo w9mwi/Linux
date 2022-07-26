@@ -179,10 +179,10 @@ HOW TO BECOME ROOT (SUPERUSER)
 CREATE A NEW USER AND SET USER'S PASSWORD
 =========================================
 1) First, login as superuser (or use "sudo" command).
-2) Add a new user named "test" to the /home directory:
-   $ useradd -m test
-3) Set the "test" user's password:
-   $ passwd test
+2) Add a new user named "tjb" to the /home directory:
+   $ useradd -m tjb
+3) Set the "tjb" user's password:
+   $ passwd tjb
 
 
 CREATE A NEW GROUP
