@@ -166,6 +166,13 @@ Example file name is:  jdk-11.0.13_linux-x64_bin.tar.gz
 
 $ tar -xvzf jdk-11.0.13_linux-x64_bin.tar.gz
 
+HOW TO ZIP/UNZIP LINUX FILES
+============================
+$ zip Pop_Songs.zip *.mp3  (Zip all .mp3 files in the current directory into Pop_songs.zip file.)
+
+$ unzip Pop_Songs.zip      (Unzip Pop_Songs.zip file into the current directory.)
+
+
 
 HOW TO CREATE A PASSWORD FOR ROOT (SUPERUSER)
 =============================================
