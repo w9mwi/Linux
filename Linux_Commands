@@ -37,7 +37,7 @@ drwxrwxr-x  4 tjb  tjb   4096 Jan 25 15:24 Tom/
 The "total 268" line designates that the directory (from
 which you run the "ll command") takes up a total of 268
 blocks of disk space.  Depending on the Linux distribution
-and version, a block of disk soace may be 512 bytes, 1024 bytes,
+and version, a block of disk space may be 512 bytes, 1024 bytes,
 2,048 bytes, etc.  This number includes all files and all
 directories, including child directories and child files.
 The following two commands also reveal this information.
