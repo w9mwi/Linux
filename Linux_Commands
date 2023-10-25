@@ -348,11 +348,16 @@ In UNIX...
 
 1) Everything is a file.  (Files, Processes, Devices are files.)
 2) Everything "running" (executing) is a process.
-3) Every file is either text or data.
-4) File handles are files.
-5) Shared memory is files.
-6) Parents sacrifice their life to create children.
-7) Zombies refuse to die.
+3) A Daemon in Linux is a program/process that runs silently in the
+   background to monitor and take care of certain services required
+   by the operating system.  The term was coined by MIT researchers
+   who used the term “daemon” as a reference to Maxwell’s demon, an
+   imaginary being that constantly works in the background sorting molecules.
+4) Every file is either text or data.
+5) "File handles" are files.
+6) "Shared memory" is files.
+7) Parents sacrifice their life to create children.
+8) Zombies refuse to die.
 
 The UNIX ls command shows...
 $ echo $$  (Displays the current process ID of your shell.)
