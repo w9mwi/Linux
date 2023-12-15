@@ -4,21 +4,21 @@ https://www.tecmint.com/51-useful-lesser-known-commands-for-linux-users/?fbclid=
 
 Linux GIMP Image Editor
 =======================
-   How to crop an image and save the selection.
-   --------------------------------------------
-   1) Tools / Selection Tools / Rectangle Select
-   2) Image / Autocrop Image
-   3) File / Export  (Saves the image to a .png file.)
-   
-   How to convert a .xcf image into a different image, like jpeg, png, etc.
-   ------------------------------------------------------------------------
-   1) Open the .xcf file.
-   2) From the menu, select: "File / Export As"
-   3) At the top of the file dialog screen that appears, enter the desired
-      filename, including the filename's extension (.jpg, .png, etc.).
-   4) Near the lower-right of the file dialog screen, select the desired
-      file type from the dropdown control.
-   5) Press the "Export" button.
+How to crop an image and save the selection.
+--------------------------------------------
+1) Tools / Selection Tools / Rectangle Select
+2) Image / Autocrop Image
+3) File / Export  (Saves the image to a .png file.)
+
+How to convert a .xcf image into a different image, like jpeg, png, etc.
+------------------------------------------------------------------------
+1) Open the .xcf file.
+2) From the menu, select: "File / Export As"
+3) At the top of the file dialog screen that appears, enter the desired
+   filename, including the filename's extension (.jpg, .png, etc.).
+4) Near the lower-right of the file dialog screen, select the desired
+   file type from the dropdown control.
+5) Press the "Export" button.
 
 ==================================================================================================
 
