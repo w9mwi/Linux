@@ -16,9 +16,7 @@ How to convert a .xcf image into a different image, like jpeg, png, etc.
 2) From the menu, select: "File / Export As"
 3) At the top of the file dialog screen that appears, enter the desired
    filename, including the filename's extension (.jpg, .png, etc.).
-4) Near the lower-right of the file dialog screen, select the desired
-   file type from the dropdown control.
-5) Press the "Export" button.
+4) Press the "Export" button.
 
 ==================================================================================================
 
