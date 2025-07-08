@@ -340,9 +340,31 @@ FROM: Track 1 at 3:02.12
 TO:   Track 2 at 4:30
 $ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
 
-=============================================================================================
 
-In UNIX...
+VIDEO - CONVERT .VOB VIDEO FILES TO .MP4 VIDEO FILES
+====================================================
+To convert a single .vob file named MyVobFile_1.vob
+to a single .mp4 file named yMp4File.mp4, run this
+command from the command line:
+
+ffmpeg -i  MyVobFile.vob   MyMp4File.mp4
+
+To convert multiple .vob files into a single .mp4 file,
+first create a .txt file containing all your .vob file
+names, in the order you want the video files to play,
+like this:
+
+file 'MyVobFile_1.vob'
+file 'MyVobFile_2.vob'
+
+In this example, we name that .txt file:  input_files.txt
+
+Then, run this command from the command line:
+$ ffmpeg -f concat -i input_files.txt -codec copy output.mp4
+
+
+MORE UNIX
+=========
 
 1) Everything is a file.  (Files, Processes, Devices are files.)
 2) Everything "running" (executing) is a process.
