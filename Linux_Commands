@@ -343,24 +343,24 @@ $ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
 
 VIDEO - CONVERT .VOB VIDEO FILES TO .MP4 VIDEO FILES
 ====================================================
-To convert a single .vob file named MyVobFile_1.vob
-to a single .mp4 file named yMp4File.mp4, run this
+To convert a single .vob file named MyVobFile.vob
+to a single .mp4 file named MyMp4File.mp4, run this
 command from the command line:
 
 ffmpeg -i  MyVobFile.vob   MyMp4File.mp4
 
 To convert multiple .vob files into a single .mp4 file,
 first create a .txt file containing all your .vob file
-names, in the order you want the video files to play,
-like this:
+names, in the order you want the video files to play.
+In this example, we'll name that .txt file "input_files.txt",
+which contains this text:
 
 file 'MyVobFile_1.vob'
 file 'MyVobFile_2.vob'
 
-In this example, we name that .txt file:  input_files.txt
-
-Then, run this command from the command line:
-$ ffmpeg -f concat -i input_files.txt -codec copy output.mp4
+Then, run this command from the command line, which will create
+a new file named MyMp4File.mp4.
+$ ffmpeg -f concat -i input_files.txt -codec copy MyMp4File.mp4
 
 
 MORE UNIX
