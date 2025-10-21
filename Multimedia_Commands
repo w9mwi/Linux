@@ -146,7 +146,10 @@ a DVD player.  To make this work, follow these instructions.
    dvdauthor -o . -t  04.mpg
    dvdauthor -o . -t  05.mpg
 
-   After you run the "dvdauthor" command for each .mpg file, copy both the AUDIO_TS
-   and VIDEO_TS directories to your new DVD disc.  You can now play that DVD on a
-   DVD player, but that DVD won't contain a menu to select your videos.  It will
-   just play your video files one after another.
+   After you run the "dvdauthor" command for each .mpg file, check the total size
+   of the combined AUDIO_TSS and VIDEO_TS directories to make certain it doesn't
+   exceed 4.7 GBm which is the maximum capacity of a DVD.
+
+   Now copy both the AUDIO_TS and VIDEO_TS directories to your new DVD disc.  You
+   can now play that DVD on a DVD player, but the DVD won't contain a menu to select
+   your videos.  It will just play all the video files one after another.
