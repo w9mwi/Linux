@@ -55,3 +55,36 @@ file 'MyVobFile_2.vob'
 Then, run this command from the command line, which will create
 a new file named MyMp4File.mp4.
 $ ffmpeg -f concat -i input_files.txt -codec copy MyMp4File.mp4
+
+
+DVD VIDEO DISC EXPLANATION OF FILE NAMES
+========================================
+A video DVD that plays on a DVD player contains two parent directories having these names:
+
+AUDIO_TS - This directory is almost always empty.  It will only contain files on a
+           DVD audio disc, not a DVD video disc. These were a niche, high-fidelity
+           audio format that never achieved widespread popularity. 
+VIDEO_TS - The files contained in this directory can be different from DVD to DVD.
+           However, the filenames will follow the conventions explained here...
+
+
+VIDEO_TS.IFO - REQUIRED.  The Video Manager Information file.  It contains control and
+               playback information for the entire DVD, including menus, regional coding,
+               and title locations.  Without it, a DVD player cannot navigate the disc.
+VIDEO_TS.VOB - NOT REQUIRED.  A Video Object file that holds the first-play content,
+               which is typically a copyright notice, a studio logo, or the main menu.
+VIDEO_TS.BUP - NOT REQUIRED.  An identical backup copy of the VIDEO_TS.IFO file.
+
+
+VTS_01_0.IFO - REQUIRED IF A VIDEO TITLE IS PRESENT.  The information file for the
+               first Video Title Set.  It stores data about the titles and chapters.
+VTS_01_0.BUP - NOT REQUIRED.  An identical backup copy of the VTS_01_0.IFO file.
+VTS_01_0.VOB - NOT REQUIRED.  Contains the menu for the first video title.
+VTS_01_1.VOB - REQUIRED.  Contains the actual video data for the first title.
+               Commercial movies often split this content into multiple VOB files
+               (VTS_01_2.VOB, VTS_01_3.VOB, etc.) to adhere to file size limits.
+
+If the DVD contains multiple titles/videos (i.e., multiple episodes of a TV show),
+the second title/video will contain filenames having the prefix 'VTS_02', the third
+title/video will have the filename prefix 'VTS_03', etc.  These files will be
+identical in behavior as filenames having the 'VTS_01' prefix described above.
