@@ -82,9 +82,10 @@ VTS_01_0.BUP - NOT REQUIRED.  An identical backup copy of the VTS_01_0.IFO file.
 VTS_01_0.VOB - NOT REQUIRED.  Contains the menu for the first video title.
 VTS_01_1.VOB - REQUIRED.  Contains the actual video data for the first title.
                Commercial movies often split this content into multiple VOB files
-               (VTS_01_2.VOB, VTS_01_3.VOB, etc.) to adhere to file size limits.
+               (VTS_01_1.VOB, VTS_01_2.VOB, VTS_01_3.VOB, etc.) to adhere to file
+               size limits.
 
 If the DVD contains multiple titles/videos (i.e., multiple episodes of a TV show),
-the second title/video will contain filenames having the prefix 'VTS_02', the third
-title/video will have the filename prefix 'VTS_03', etc.  These files will be
+the second episode will contain filenames having the prefix 'VTS_02', the third
+episode will have the filename prefix 'VTS_03', etc.  These files will be
 identical in behavior as filenames having the 'VTS_01' prefix described above.
