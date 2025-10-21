@@ -96,3 +96,44 @@ If the DVD contains multiple titles/videos (i.e., multiple episodes of a TV show
 the second episode will contain filenames having the prefix 'VTS_02', the third
 episode will have the filename prefix 'VTS_03', etc.  These files will be
 identical in behavior as filenames having the 'VTS_01' prefix described above.
+
+
+HOW TO MAKE A NEW DVD VIDEO DISC FROM .VOB FILES COPIED FROM OTHER DVDS
+=======================================================================
+Assume you want to copy certain .VOB video files from one or more DVD video
+discs to a new DVD disc, so that new DVD will play on a DVD player.  If you
+just copy those .VOB video files to your new DVD, that DVD won't play on
+a DVD player.  To make this work, follow these instructions.
+
+1) Copy the .VOB video files, ONE AT A TIME, from the DVD(s) to a temp directory
+   on your computer.  After each .VOB file is copied, rename the .VOB file in
+   your temp directory so its filename has a number for a prefix, as shown below.
+   The number will correspond to the order you want the video files to play on the
+   DVD player.  For example, the 01.VOB video file will be the FIRST video to
+   play on the DVD player, the 02.VOB file will be the SECOND file to play, the
+   05.VOB video file will be the FIFTH video to play.
+
+   01.VOB
+   02.VOB
+   03.VOB
+   04.VOB
+   05.VOB
+
+   WARNING:  Before you do this, make certain all the .VOB video files you want
+             to convert, and then play on a single DVD, won't exceed the 4.7 GB
+             capacity of a DVD.  To be safe, all the .VOB video files combined
+             should not exceed approx. 4.0 GB.  Because the new DVD you create
+             will include additional files, and not just video files.
+
+2) Convert all the .VOB files in your temp directory to .mpg files, using the
+   command below.  These newly-created .mpg files will have the NTSC format
+   (for American TVs), and have an aspect ratio of 16:9.
+
+   ffmpeg -i  01.VOB  -target ntsc-dvd -aspect 16:9  01.mpg
+   ffmpeg -i  02.VOB  -target ntsc-dvd -aspect 16:9  02.mpg
+
+3) The following command will create the AUDIO_TS directory (which will be empty),
+   and the VIDEO_TS directory that contains all the video files.
+
+   export VIDEO_FORMAT=NTSC
+   dvdauthor -o ./ -T
