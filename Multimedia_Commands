@@ -45,7 +45,7 @@ ffmpeg -i  MyVobFile.VOB   MyMpgFile.mpg
 
 The following command converts a .mp4 file to a .mpg, where the
 .mpg file will be NTSC compatible (for American TVs), and have
-an aspect ration of 16:9.
+an aspect ratio of 16:9.
 
 ffmpeg -i  MyMp4File.mp4  -target ntsc-dvd -aspect 16:9  MyMpgFile.mpg
 
