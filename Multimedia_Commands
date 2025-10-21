@@ -41,7 +41,13 @@ To convert a single .VOB file named VTS_01_1.VOB to a single .mp4
 or .mpg file, run one of these commands from the command line:
 
 ffmpeg -i  MyVobFile.VOB   MyMp4File.mp4
-ffmpeg -i  MyVobFile.VOB   MyMp4File.mpg
+ffmpeg -i  MyVobFile.VOB   MyMpgFile.mpg
+
+The following command converts a .mp4 file to a .mpg, where the
+.mpg file will be NTSC compatible (for American TVs), and have
+an aspect ration of 16:9.
+
+ffmpeg -i  MyMp4File.mp4  -target ntsc-dvd -aspect 16:9  MyMpgFile.mpg
 
 
 To convert multiple .vob files into a single .mp4 file,
