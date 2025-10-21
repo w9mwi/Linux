@@ -139,4 +139,4 @@ a DVD player.  To make this work, follow these instructions.
    dvdauthor -o ./ -T
 
    export VIDEO_FORMAT=NTSC
-   dvdauthor -o . -t  01.mpg  02.mpg  03.mpg  04.mpg  05.mpg  06.mpg  07.mpg  08.mpg  09.mpg  10.mpg  11.mpg  12.mpg  13.mpg  14.mpg  15.mp5
+   dvdauthor -o . -t  01.mpg  02.mpg  03.mpg  04.mpg  05.mpg  06.mpg  07.mpg  08.mpg  09.mpg  10.mpg  11.mpg  12.mpg  13.mpg  14.mpg  15.mpg
