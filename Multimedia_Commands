@@ -138,7 +138,9 @@ a DVD player.  To make this work, follow these instructions.
 
 4) For each .mpg file that you created, run the "dvdauthor" command.  The first time
    the "dvdauthor" command is run, the AUDIO_TS and VIDEO_TS directories will be
-   created in your temp dirctory.
+   created in your temp dirctory.  Each time it's run, it will also create the
+   "VTS_01", "VTS_02", "VTS_03", etc. files mentioned in the above section titled
+   "DVD VIDEO DISC EXPLANATION OF FILE NAMES".
    
    dvdauthor -o . -t  01.mpg
    dvdauthor -o . -t  02.mpg
@@ -146,10 +148,17 @@ a DVD player.  To make this work, follow these instructions.
    dvdauthor -o . -t  04.mpg
    dvdauthor -o . -t  05.mpg
 
-   After you run the "dvdauthor" command for each .mpg file, check the total size
-   of the combined AUDIO_TS and VIDEO_TS directories to make certain it's less
-   than 4.7 GB, which is the maximum capacity of a DVD.
+   
+5) Run the following "dvdauthor" command.
+
+   dvdauthor -o ./ -T
+
+   This will create the VIDEO_TS.BUP and VIDEO_TS.IFO files mentioned in
+   the above section titled "DVD VIDEO DISC EXPLANATION OF FILE NAMES".
+
+   Check the total size of the combined AUDIO_TS and VIDEO_TS directories to
+   make certain it's less than 4.7 GB, which is the maximum capacity of a DVD.
 
    Now copy both the AUDIO_TS and VIDEO_TS directories to your new DVD disc.  You
-   can now play that DVD on a DVD player, but the DVD won't contain a menu to select
+   can now play that DVD on a DVD player.  But the DVD won't contain a menu to select
    your videos.  It will just play all the video files one after another.
