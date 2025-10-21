@@ -35,13 +35,14 @@ TO:   Track 2 at 4:30
 $ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
 
 
-VIDEO - CONVERT .VOB VIDEO FILES TO .MP4 VIDEO FILES
-====================================================
-To convert a single .vob file named MyVobFile.vob
-to a single .mp4 file named MyMp4File.mp4, run this
-command from the command line:
+VIDEO - CONVERT .VOB VIDEO FILES TO .MP4 OR .MPG VIDEO FILES
+============================================================
+To convert a single .VOB file named VTS_01_1.VOB to a single .mp4
+or .mpg file, run one of these commands from the command line:
 
-ffmpeg -i  MyVobFile.vob   MyMp4File.mp4
+ffmpeg -i  MyVobFile.VOB   MyMp4File.mp4
+ffmpeg -i  MyVobFile.VOB   MyMp4File.mpg
+
 
 To convert multiple .vob files into a single .mp4 file,
 first create a .txt file containing all your .vob file
