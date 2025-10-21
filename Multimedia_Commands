@@ -132,11 +132,21 @@ a DVD player.  To make this work, follow these instructions.
    ffmpeg -i  01.VOB  -target ntsc-dvd -aspect 16:9  01.mpg
    ffmpeg -i  02.VOB  -target ntsc-dvd -aspect 16:9  02.mpg
 
-3) The following command will create the AUDIO_TS directory (which will be empty),
-   and the VIDEO_TS directory that contains all the video files.
+3) Run the following "export" command.
 
    export VIDEO_FORMAT=NTSC
-   dvdauthor -o ./ -T
 
-   export VIDEO_FORMAT=NTSC
-   dvdauthor -o . -t  01.mpg  02.mpg  03.mpg  04.mpg  05.mpg  06.mpg  07.mpg  08.mpg  09.mpg  10.mpg  11.mpg  12.mpg  13.mpg  14.mpg  15.mpg
+4) For each .mpg file that you created, run the "dvdauthor" command.  The first time
+   the "dvdauthor" command is run, the AUDIO_TS and VIDEO_TS directories will be
+   created in your temp dirctory.
+   
+   dvdauthor -o . -t  01.mpg
+   dvdauthor -o . -t  02.mpg
+   dvdauthor -o . -t  03.mpg
+   dvdauthor -o . -t  04.mpg
+   dvdauthor -o . -t  05.mpg
+
+   After you run the "dvdauthor" command for each .mpg file, copy both the AUDIO_TS
+   and VIDEO_TS directories to your new DVD disc.  You can now play that DVD on a
+   DVD player, but that DVD won't contain a menu to select your videos.  It will
+   just play your video files one after another.
