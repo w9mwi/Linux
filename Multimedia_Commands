@@ -1,0 +1,57 @@
+AUDIO - CONVERT .WAV FILES TO .MP3 FILES
+========================================
+ffmpeg -i track01.wav track01.mp3
+
+
+AUDIO - CONVERT .WAV FILES TO .FLAC FILES
+=========================================
+sox  track_01.wav  track_01.flac
+
+
+AUDIO - CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
+=====================================================
+SEE --> http://www.linux-commands-examples.com/cdparanoia
+
+Extract only the 3rd track of the CD to a file...
+$ cdparanoia 3 /home/tbouril/DaveMason_3.flac
+
+Extract tracks 1 through 3 of the CD to a file...
+$ cdparanoia 1-3 /home/tbouril/DaveMason_1to3.flac
+
+Extract the only the first track of the CD to a file...
+$ cdparanoia -- -1 /home/tbouril/DaveMason_1.flac
+
+Extract the first 2 tracks (songs) of the CD to a single file...
+$ cdparanoia -- -2 /home/tbouril/DaveMason_2.flac
+
+Visually display the data contents of the CD.  Use that information
+to rip individual tracks from the CD to a file by running a command
+similar to the one shown below in the next example.
+$ cdparanoia -vsQ
+
+Extract the following from the CD to a single file
+FROM: Track 1 at 3:02.12
+TO:   Track 2 at 4:30
+$ cdparanoia "1[3:02.12]-2[4:30]" /home/tbouril/DaveMason_4.flac
+
+
+VIDEO - CONVERT .VOB VIDEO FILES TO .MP4 VIDEO FILES
+====================================================
+To convert a single .vob file named MyVobFile.vob
+to a single .mp4 file named MyMp4File.mp4, run this
+command from the command line:
+
+ffmpeg -i  MyVobFile.vob   MyMp4File.mp4
+
+To convert multiple .vob files into a single .mp4 file,
+first create a .txt file containing all your .vob file
+names, in the order you want the video files to play.
+In this example, we'll name that .txt file "input_files.txt",
+which contains this text:
+
+file 'MyVobFile_1.vob'
+file 'MyVobFile_2.vob'
+
+Then, run this command from the command line, which will create
+a new file named MyMp4File.mp4.
+$ ffmpeg -f concat -i input_files.txt -codec copy MyMp4File.mp4
