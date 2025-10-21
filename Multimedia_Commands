@@ -65,8 +65,8 @@ AUDIO_TS - This directory is almost always empty.  It will only contain files on
            DVD audio disc, not a DVD video disc. These were a niche, high-fidelity
            audio format that never achieved widespread popularity. 
 VIDEO_TS - The files contained in this directory can be different from DVD to DVD.
-           However, the filenames will follow the conventions explained here...
-
+           However, the filenames in the VIDEO_TS directory will follow the
+           conventions explained here...
 
 VIDEO_TS.IFO - REQUIRED.  The Video Manager Information file.  It contains control and
                playback information for the entire DVD, including menus, regional coding,
