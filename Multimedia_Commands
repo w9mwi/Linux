@@ -101,13 +101,17 @@ identical in behavior as filenames having the 'VTS_01' prefix described above.
 HOW TO MAKE A NEW DVD VIDEO DISC FROM .VOB FILES COPIED FROM OTHER DVDS
 =======================================================================
 Assume you want to copy certain .VOB video files from one or more DVD video
-discs to a new DVD disc, so that new DVD will play on a DVD player.  If you
+discs to a new DVD disc, so the new DVD will play on a DVD player.  If you
 just copy those .VOB video files to your new DVD, that DVD won't play on
 a DVD player.  To make this work, follow these instructions.
 
+NOTE: Following these instructions will create a DVD that will play all
+      video files on the DVD, from the first video to the last video.
+      There will be no menu to select which video you want to play.
+
 1) Copy the .VOB video files, ONE AT A TIME, from the DVD(s) to a temp directory
    on your computer.  After each .VOB file is copied, rename the .VOB file in
-   your temp directory so its filename has a number for a prefix, as shown below.
+   your temp directory so its filename has a number for a prefix as shown below.
    The number will correspond to the order you want the video files to play on the
    DVD player.  For example, the 01.VOB video file will be the FIRST video to
    play on the DVD player, the 02.VOB file will be the SECOND file to play, the
@@ -116,8 +120,6 @@ a DVD player.  To make this work, follow these instructions.
    01.VOB
    02.VOB
    03.VOB
-   04.VOB
-   05.VOB
 
    WARNING:  Before you do this, make certain all the .VOB video files you want
              to convert, and then play on a single DVD, won't exceed the 4.7 GB
@@ -126,38 +128,45 @@ a DVD player.  To make this work, follow these instructions.
              will include additional files, and not just video files.
 
 2) Convert all the .VOB files in your temp directory to .mpg files by running
-   the "ffmpeg" command, like shown below.  These newly-created .mpg files
-   will have the NTSC format (for American TVs), and have an aspect ratio of 16:9.
+   the "ffmpeg" command as shown below.  These newly-created .mpg files will
+   have the NTSC format (for American TVs), and have an aspect ratio of 16:9.
 
    ffmpeg -i  01.VOB  -target ntsc-dvd -aspect 16:9  01.mpg
    ffmpeg -i  02.VOB  -target ntsc-dvd -aspect 16:9  02.mpg
+   ffmpeg -i  03.VOB  -target ntsc-dvd -aspect 16:9  03.mpg
 
-3) Run the following "export" command.
+3) Using a text editor, create a new file named 'dvdauthor.xml' inside
+   the same directory that contains the 01.mpg, 02.mpg, and 03.mpg files.
+   Place the following text inside the dvdauthor.xml file.
+
+   <dvdauthor>
+     <vmgm />
+     <titleset>
+       <titles>
+         <pgc>
+           <vob file="01.mpg" />
+           <vob file="02.mpg" />
+           <vob file="03.mpg" />
+           <post>jump chapter 1;</post>
+         </pgc>
+       </titles>
+     </titleset>
+   </dvdauthor>
+
+4) From the same directory that contains the dvdauthor.xml and the .mpg files,
+   run the following two linux commands from the command line:
 
    export VIDEO_FORMAT=NTSC
+   dvdauthor -o . -x dvdauthor.xml
 
-4) For each .mpg file that you created, run the "dvdauthor" command like shown below.
-   The first time the "dvdauthor" command is run, the AUDIO_TS and VIDEO_TS directories
-   will be created in your temp dirctory.  Each time it's run, it will also create the
-   "VTS_01", "VTS_02", "VTS_03", etc. files mentioned in the above section titled
-   "DVD VIDEO DISC EXPLANATION OF FILE NAMES".
+   This will generate the AUDIO_TS and VIDEO_TS directories.  The AUDIO_TS
+   directory will be empty, and the VIDEO_TS directory will contain all
+   the related video files.
 
-   dvdauthor -o . -t  01.mpg
-   dvdauthor -o . -t  02.mpg
-   dvdauthor -o . -t  03.mpg
-   dvdauthor -o . -t  04.mpg
-   dvdauthor -o . -t  05.mpg
-
-5) Run the following "dvdauthor" command.
-
-   dvdauthor -o ./ -T
-
-   This will create the VIDEO_TS.BUP and VIDEO_TS.IFO files mentioned in
-   the above section titled "DVD VIDEO DISC EXPLANATION OF FILE NAMES".
-
-   Check the total size of the combined AUDIO_TS and VIDEO_TS directories to
-   make certain it's less than 4.7 GB, which is the maximum capacity of a DVD.
+5) Check the total size of the combined AUDIO_TS and VIDEO_TS directories to make
+   certain they're less than 4.7 GB, which is the maximum capacity of a DVD.
 
    Now copy both the AUDIO_TS and VIDEO_TS directories to your new DVD disc.  You
-   can now play that DVD on a DVD player.  But the DVD won't contain a menu to select
-   your videos.  It will just play all the video files one after another.
+   can now play that DVD on a DVD player.  The DVD won't contain a menu to select
+   your videos.  It will just play all the video files on the DVD in the order
+   they appear in the above dvdauthor.xml file.
