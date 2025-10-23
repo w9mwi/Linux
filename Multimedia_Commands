@@ -128,7 +128,7 @@ NOTE: Following these instructions will create a DVD that will play all
 
 2) Convert all the .VOB files in your temp directory to .mpg files by running
    the "ffmpeg" command as shown below.  These newly-created .mpg files will
-   have the NTSC format (740 pixels wide, 480 pixels high) for American TVs,
+   have the NTSC format (720 pixels wide, 480 pixels high) for American TVs,
    and have an aspect ratio of 16:9.
 
    ffmpeg -i  01.VOB  -target ntsc-dvd -aspect 16:9  01.mpg
