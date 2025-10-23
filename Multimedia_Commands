@@ -153,9 +153,6 @@ NOTE: Following these instructions will create a DVD that will play all
      </titleset>
    </dvdauthor>
 
-4) From your temp directory, run the following linux command:
-   dvd-menu -i menu.png -o menu.vob -s 2 -x dvd.xml
-
 4) From the same directory that contains the dvdauthor.xml and the .mpg files,
    run the following two linux commands from the command line:
 
