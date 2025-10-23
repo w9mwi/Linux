@@ -121,15 +121,15 @@ NOTE: Following these instructions will create a DVD that will play all
    02.VOB
    03.VOB
 
-   WARNING:  Before you do this, make certain all the .VOB video files you want
-             to convert, and then play on a single DVD, won't exceed the 4.7 GB
-             capacity of a DVD.  To be safe, all the .VOB video files combined
-             should not exceed approx. 4.4 GB.  Because the new DVD you create
-             will include additional files, and not just video files.
+   WARNING:  Make certain all these .VOB video files combined won't exceed the
+             4.7 GB capacity of a DVD.  To be safe, all the .VOB video files
+             combined should not exceed approx. 4.4 GB.  Because the new DVD
+             you create will include additional files, and not just video files.
 
 2) Convert all the .VOB files in your temp directory to .mpg files by running
    the "ffmpeg" command as shown below.  These newly-created .mpg files will
-   have the NTSC format (for American TVs), and have an aspect ratio of 16:9.
+   have the NTSC format (740 pixels wide, 480 pixels high) for American TVs,
+   and have an aspect ratio of 16:9.
 
    ffmpeg -i  01.VOB  -target ntsc-dvd -aspect 16:9  01.mpg
    ffmpeg -i  02.VOB  -target ntsc-dvd -aspect 16:9  02.mpg
