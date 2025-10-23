@@ -135,9 +135,9 @@ NOTE: Following these instructions will create a DVD that will play all
    ffmpeg -i  02.VOB  -target ntsc-dvd -aspect 16:9  02.mpg
    ffmpeg -i  03.VOB  -target ntsc-dvd -aspect 16:9  03.mpg
 
-3) Using a text editor, create a new file named 'dvd.xml' inside the
-   same directory that contains the 01.mpg, 02.mpg, and 03.mpg files.
-   Place the following text inside the dvd.xml file.
+3) Using a text editor, create a new file named 'dvdauthor.xml' inside
+   the same directory that contains the 01.mpg, 02.mpg, and 03.mpg files.
+   Place the following text inside the dvdauthor.xml file.
 
    <dvdauthor>
      <vmgm />
