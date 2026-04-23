@@ -304,21 +304,31 @@ COPY/SYNC ALL FILES AND DIRECTORIES RECURSIVLEY USING RSYNC COMMAND
 In the following rsync command, "/home/tjb" (without the trailing slash char)
 makes the rsync command sync ALL files and folders contained in the tjb folder.
 Adding the trailing slash char after tjb (/home/tjb/) tells rsync to sync
-ONLY the contents of the tjb folder.  Place the following text into a file
-named stjb.sh, then make that stjb.sh file executable.
+ONLY the contents of the tjb folder.  Place the below text into a file
+named stjb.sh, located in the "/home/tjb" folder.  Then make that stjb.sh
+file executable.
 
-# NOTE:  The following directory points to the secondary
-#        solid state drive used for data backup.
-#        /media/tjb/Data_SSD
-#
-#        Also, the "-a" flag in the below rsync command
-#        is equivalent to this flag: "-rlptgoD"
-#
-# Copy all files and directories recursively...
+# This stjb.sh file executes the below rsynch command;
+# which copies all files and folders recursively...
 # FROM:  /home/tjb
 # TO:    /media/tjb/Data_SSD/tjb/
-rsync -av --delete   /home/tjb   /media/tjb/Data_SSD/
-
+#
+# 1) The below rsync command MUST NOT include a trailing
+#    slash char on the "/home/tjb" folder, like this:
+#    /home/tjb/
+#    As that will prevent child folders from being backed up.
+#
+# 2) The following directory points to the secondary
+#    solid state drive used for data backup.
+#    /media/tjb/Data_SSD
+#
+# 3) The "-a" flag in the below rsync command is
+#    equivalent to these 7 flags: "-rlptgoD"
+#
+# 4) Each --exclude flag in the below rsync command
+#    excludes the specified directory from the backup.
+#
+rsync -av --delete   --exclude='.cache' --exclude='.icons' --exclude='.themes'   /home/tjb   /media/tjb/Data_SSD/
 ---------------------------------------------------------
 
 
