@@ -301,12 +301,8 @@ $ grep '.*a.*e.*i.*o.*u' /usr/share/dict/american-english
 
 COPY/SYNC ALL FILES AND DIRECTORIES RECURSIVLEY USING RSYNC COMMAND
 ===================================================================
-In the following rsync command, "/home/tjb" (without the trailing slash char)
-makes the rsync command sync ALL files and folders contained in the tjb folder.
-Adding the trailing slash char after tjb (/home/tjb/) tells rsync to sync
-ONLY the contents of the tjb folder.  Place the below text into a file
-named stjb.sh, located in the "/home/tjb" folder.  Then make that stjb.sh
-file executable.
+Place the below text into a file named stjb.sh, located in the
+"/home/tjb" folder.  Then make that stjb.sh file executable.
 
 # This stjb.sh file executes the below rsynch command;
 # which copies all files and folders recursively...
