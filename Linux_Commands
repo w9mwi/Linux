@@ -367,3 +367,32 @@ $ ls -la /proc/$$  (Displays the directory representing your shell process.)
 $ cat /proc/cmdline  ("cmdline" represents a directory the /proc directory.)
 $ ls -la /proc  (Displays all running processes.  Most are numbers, which are directories.)
 $ ls -la /proc
+
+
+URL TRAILING SLASH CHARACTER
+============================
+When a URL is entered into a web browser, the URL may, or may not, include
+a trailing slash (/) character as in the following two examples:
+
+EXAMPLE 1)
+   https://example.com/news/  (The URL includes a trailing slash character.)
+
+   In this case, the server immediately looks inside the folder/directory
+   named "news" for the default file, which is usually named "index.html".
+   Assuming the default file named "index.html" does exist inside the "news"
+   directory/folder, the following two URLs will return the same web page.
+
+   https://example.com/news/
+   https://example.com/news/index.html
+
+EXAMPLE 2)
+   https://example.com/news   (The URL does NOT include a trailing slash character.)
+
+   In this case, the server looks for a file named "news" that contains valid
+   HTML code.  If there exists no "news" file, and "news" is a directory/folder,
+   the server will automatically redirect to this URL:
+
+   https://example.com/news/index.html
+
+   If the "news" directory/folder doesn't exist, or there is no index.html file
+   inside the "news" directory/folder, then the server will return an error.
