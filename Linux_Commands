@@ -396,3 +396,21 @@ EXAMPLE 2)
 
    If the "news" directory/folder doesn't exist, or there is no index.html file
    inside the "news" directory/folder, then the server will return an error.
+
+
+8 NEW LINUX COMMANDS THAT IMPROVE OLD COMMANDS
+==============================================
+
+bat = cat
+fd = find
+ripgrep = grep
+ncdu = du
+btop = top
+eza = ls
+gping = ping
+zoxide = cd
+
+TO INSTALL, RUN
+
+apt update
+apt install bat fd-find ripgrep ncdu btop eza gping zoxide -y
