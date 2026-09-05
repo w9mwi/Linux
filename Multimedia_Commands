@@ -7,10 +7,32 @@ AUDIO - CONVERT .WAV FILES TO .FLAC FILES
 =========================================
 sox  track_01.wav  track_01.flac
 
-PulseAudio Volume Control Application
+
+ALSAMIXER MIXER APPLICATION
+===========================
+Alsamixer is an ncurses-based terminal user interface mixer program for the
+Advanced Linux Sound Architecture (ALSA).  It allows users to configure sound
+settings, select audio devices, and adjust volume levels directly from the
+command line using interactive visual sliders and switches.  This application
+is launched by entering the follwing text on the command line:
+
+$ alsamixer
+
+To exit the alsamixer application  (after making the desired changes) press
+the ESC key.
+
+Changes made in alsamixer take effect immediately but are temporary and can revert
+to defaults when your system reboots.  To permanently save your configuration to
+disk, you must use the alsactl utility after you change its settings by entering
+the follwing text on the command line:
+
+$ sudo alsactl store
+
+
+PULSEAUDIO VOLUME CONTROL APPLICATION
 =====================================
 PulseAudio Volume Control is a Linux application that is launched from the command line
-by entering the follwinf text on the command line:
+by entering the follwing text on the command line:
 
 $ pavucontrol
 
