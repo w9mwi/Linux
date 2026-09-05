@@ -7,6 +7,40 @@ AUDIO - CONVERT .WAV FILES TO .FLAC FILES
 =========================================
 sox  track_01.wav  track_01.flac
 
+PulseAudio Volume Control Application
+=====================================
+PulseAudio Volume Control is a Linux application that is launched from the command line
+by entering the follwinf text on the command line:
+
+$ pavucontrol
+
+This application was originally built for the PulseAudio sound server; however, it is
+fully compatible and widely used with modern replacements like PipeWire.
+
+Unlike standard volume sliders that only change the master volume, pavucontrol gives you
+granular control divided across five main tabs located at the top of the application's window:
+
+1) Playback - : Lists every application currently playing audio (e.g., Firefox, VLC, Spotify).
+   You can change the volume for each app independently or instantly route an app's audio
+   stream to a different output device (like switching a movie from your laptop speakers
+   to a Bluetooth headset) without interrupting playback.
+
+2) Recording - Shows all apps currently capturing audio (e.g., Discord, OBS Studio, Zoom).
+   It lets you assign specific microphones to specific apps on the fly.
+
+3) Output Devices - Manages your physical audio outputs, such as speakers, headphones,
+   HDMI outputs, or Bluetooth devices. You can set the master volume for each hardware
+   device, adjust left/right balance, and configure latency offsets.
+
+4) Input Devices - Manages physical audio capture hardware, allowing you to mute or adjust
+   the gain levels of individual microphones or line-in ports.
+
+5) Configuration - Allows you to switch the "profile" of your sound cards.  For example,
+   you can switch an HDMI output from "Digital Stereo" to "5.1 Surround," or completely
+   disable an unused sound card so your system stops automatically switching to it.
+
+alsamixer
+alsamixer
 
 AUDIO - CDPARANOIA LINUX APPLICATION COMMAND EXAMPLES
 =====================================================
